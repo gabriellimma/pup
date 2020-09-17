@@ -11,7 +11,7 @@ async function ghost() {
     await page.goto('https://www.samsung.com/ca/accessibility/overview/');
 
     const pageTwo = await browser.newPage();
-    await pageTwo.goto('https://www.samsung.com/ca/accessibility/overview/');
+    await pageTwo.goto('https://www.samsung.com/br/accessibility/overview/');
     
     const title =  await page.evaluate(() => {
         return document.querySelector('head > title').text
