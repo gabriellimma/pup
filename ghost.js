@@ -4,13 +4,16 @@ console.log('starting...');
 
 
 async function ghost() {
-    //startup
+  
+  const hShop = 'https://hshopfront.samsung.com/co/support/mobile-devices/galaxy-j6-how-to-activate-the-unlock-by-footprint/'
+  const live = 'https://www.samsung.com/co/support/mobile-devices/galaxy-j6-how-to-activate-the-unlock-by-footprint/'  
+  //startup
     const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
-    await page.goto('https://www.samsung.com/se/accessibility/web-accessibility/');
+    await page.goto(live);
 
     const pageTwo = await browser.newPage();
-    await pageTwo.goto('https://hshopfront.samsung.com/se/accessibility/web-accessibility/');
+    await pageTwo.goto(hShop);
 
     //insere a senha do hshop
     await pageTwo.type('#username', 'qauser');
@@ -173,7 +176,7 @@ function compare (params1, params2, propriedade) {
       console.log(`${propriedade}: OK`);
   } else {
       console.log(`${propriedade}: FAIL`);
-      console.log(propriedade+" live: " + params1);
+      console.log(propriedade+" live : " + params1);
       console.log(propriedade+" hshop: " +  params2);
   }
 
