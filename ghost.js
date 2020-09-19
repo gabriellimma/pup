@@ -5,8 +5,8 @@ console.log('starting...');
 
 async function ghost() {
   
-  const hShop = 'https://hshopfront.samsung.com/co/support/mobile-devices/galaxy-j6-how-to-activate-the-unlock-by-footprint/'
-  const live = 'https://www.samsung.com/co/support/mobile-devices/galaxy-j6-how-to-activate-the-unlock-by-footprint/'  
+  const hShop = 'https://hshopfront.samsung.com/uk/accessibility/web-accessibility/'
+  const live = 'https://www.samsung.com/uk/accessibility/web-accessibility/'  
   //startup
     const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();

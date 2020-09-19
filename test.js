@@ -8,10 +8,10 @@ async function ghost() {
     //startup
     const browser = await puppeteer.launch({headless: false});
     const page = await browser.newPage();
-    await page.goto('https://www.samsung.com/se/accessibility/web-accessibility/');
+    await page.goto('https://www.samsung.com/kz_kz/accessibility/web-accessibility/');
     
     const pageTwo = await browser.newPage();
-    await pageTwo.goto('https://hshopfront.samsung.com/se/accessibility/web-accessibility/');
+    await pageTwo.goto('https://hshopfront.samsung.com/kz_kz/accessibility/web-accessibility/');
     
     //insere a senha do hshop
     await pageTwo.type('#username', 'qauser');
@@ -37,6 +37,16 @@ async function ghost() {
         
         return response
     }
+
+   // --
+    async function getMeta( tag ) {
+        const response = await page.evaluate(tag => {
+            return document.getElementsByName(tag).item(0).content.toString()
+        }, tag);
+        
+        return response
+    }
+
     
     const liveTitle = await getMetaLive('title');
     const hShopTitle = await getMetaHshop('title');
