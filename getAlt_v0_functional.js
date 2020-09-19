@@ -11,10 +11,10 @@ async function ghost() {
 
     const browser = await puppeteer.launch({headless: false});
     const live = await browser.newPage();
-    await live.goto(liveURL);
+    await live.goto(liveURL, {waitUntil: 'domcontentloaded'});
 
     const hShop = await browser.newPage();
-    await hShop.goto(hShopURL);
+    await hShop.goto(hShopURL, {waitUntil: 'domcontentloaded'});
 
     const liveAlt =  await live.evaluate(() => {
 

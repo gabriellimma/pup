@@ -7,7 +7,7 @@ console.log('starting...');
 async function ghost() {
 
     //startup
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const live = await browser.newPage();
     await live.goto('https://www.samsung.com/uz_ru/accessibility/web-accessibility/', {waitUntil: 'domcontentloaded'});
     
