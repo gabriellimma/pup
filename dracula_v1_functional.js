@@ -9,10 +9,10 @@ async function ghost() {
     //startup
     const browser = await puppeteer.launch({headless: false});
     const live = await browser.newPage();
-    await live.goto('https://www.samsung.com/uz_ru/accessibility/web-accessibility/');
+    await live.goto('https://www.samsung.com/uz_ru/accessibility/web-accessibility/', {waitUntil: 'domcontentloaded'});
     
     const hshop = await browser.newPage();
-    await hshop.goto('https://hshopfront.samsung.com/uz_ru/accessibility/web-accessibility/');
+    await hshop.goto('https://hshopfront.samsung.com/uz_ru/accessibility/web-accessibility/', {waitUntil: 'domcontentloaded'});
     
     //insere a senha do hshop
     await hshop.type('#username', 'qauser');
