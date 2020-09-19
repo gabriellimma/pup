@@ -6,8 +6,8 @@ console.log('starting...');
 
 async function ghost() {
 
-    const liveURL = 'https://www.samsung.com/pt/accessibility/overview'
-    const hShopURL = 'https://www.samsung.com/br/accessibility/overview'
+    const liveURL = 'https://www.samsung.com/cn/accessibility/overview'
+    const hShopURL = 'https://www.samsung.com/cn/accessibility/overview'
 
     const browser = await puppeteer.launch({headless: false});
     const live = await browser.newPage();
@@ -15,8 +15,6 @@ async function ghost() {
 
     const hShop = await browser.newPage();
     await hShop.goto(hShopURL);
-   
-
 
     const liveAlt =  await live.evaluate(() => {
 
