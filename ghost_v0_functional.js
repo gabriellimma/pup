@@ -16,8 +16,8 @@ async function ghost() {
     await pageTwo.goto(hShop);
 
     //insere a senha do hshop
-    await pageTwo.type('#username', 'qauser');
-    await pageTwo.type('#password', 'groqa1!');
+    await pageTwo.type('#username', 'confidential');
+    await pageTwo.type('#password', 'confidential');
     await pageTwo.keyboard.press('Enter');
 
     await pageTwo.waitForNavigation();
