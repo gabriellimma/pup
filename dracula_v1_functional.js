@@ -15,8 +15,8 @@ async function ghost() {
     await hshop.goto('https://hshopfront.samsung.com/uz_ru/accessibility/web-accessibility/', {waitUntil: 'domcontentloaded'});
     
     //insere a senha do hshop
-    await hshop.type('#username', 'qauser');
-    await hshop.type('#password', 'groqa1!');
+    await hshop.type('#username', 'confidential');
+    await hshop.type('#password', 'confidential!');
     await hshop.keyboard.press('Enter');
     
     await hshop.waitForNavigation();
